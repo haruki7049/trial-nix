@@ -8,6 +8,7 @@
 sbcl.buildASDFSystem {
   pname = "trial";
   version = "0-unstable-2025-03-08";
+
   src = fetchFromGitHub {
     owner = "Shirakumo";
     repo = "trial";
@@ -49,4 +50,6 @@ sbcl.buildASDFSystem {
     sbclPackages.verbose
     sbclPackages.zpng
   ];
+
+  XDG_CACHE_HOME = "$TMPDIR/.cache";
 }
